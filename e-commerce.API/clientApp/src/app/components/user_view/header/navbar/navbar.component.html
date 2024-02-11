@@ -1,0 +1,15 @@
+<div id="carousel" class="overflow-hidden">
+    <div [style.transform]="'translateX(' + translateX + ')'" class="flex flex-nowrap  duration-500">
+        
+    <a *ngFor="let nav of navs" routerLink="category/{{nav}}" routerLinkActive="txt-main nav"
+    class="cursor-pointer font-bold text-nowrap p-4 text-sm duration-500 rounded-t-xl hover:bg-gray-200
+    hover:text-gray-600">
+        {{nav}}
+    </a>
+    
+</div>
+<button (click)="next()" id="next"[class.hidden]="translateX >= '800px'" class="absolute left-0 m-2 txt-main bg-white px-1 py-2 font-bold">&#10095;</button>
+<button (click)="prev()" id="prev" [class.hidden]="currentIndex === 0" class="absolute right-0-0 m-2 txt-main bg-white px-1 py-2
+font-bold">&#10094;</button>
+
+</div>
