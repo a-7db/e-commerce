@@ -2,13 +2,17 @@
 <div class="bg-white flex flex-col  px-5 py-4">
 
     <h1 class="font-bold pb-1">الماركة</h1>
-    <div class="mx-3 my-2 flex flex-row align-middle" *ngFor="let brand of brands">
-        <input class="w-4 h-4" type="checkbox" id="{{brand.ID}}">
-        <label class="leading-3 mx-4 text-sm font-bold txt-xl-grey" for="{{brand.ID}}">{{ brand.name }}</label>
+    <div *ngFor="let brand of brands; let i = index">
+        
+        <label *ngIf="(i + 1) <= length" class="flex flex-row align-middle gap-4 mx-3 my-3 leading-3 text-xs font-bold txt-xl-grey cursor-pointer" for="{{brand.ID}}">
+            <input class="w-4 h-4 cursor-pointer custom-checkbox" type="checkbox" id="{{brand.ID}}" [(ngModel)]="brand.checked">
+            {{ brand.name }}
+        </label>
+        
     </div>
-    <button class="self-end text-sm font-bold txt-main">عرض المزيد الماركة</button>
+    <button (click)="displayMore()" class="self-end text-sm font-bold txt-main">{{label}}</button>
 </div>
 <div class="bg-white margin p-4">
-    <h5 class="txt-main text-sm font-bold">إلغاء الكل</h5>
+    <button (click)="unchackedAll()" class="txt-main text-sm font-bold">إلغاء الكل</button>
 </div>
 </div>

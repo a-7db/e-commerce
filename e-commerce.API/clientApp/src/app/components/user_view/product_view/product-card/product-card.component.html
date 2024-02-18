@@ -1,0 +1,18 @@
+<div routerLink="/product/{{product.slug}}"
+class="flex h-80 flex-col justify-evenly px-2 py-4 items-center bg-white border border-gray-200 cursor-pointer">
+
+<img width="130" [src]="product.image" alt="{{product.slug}}-image">
+<button class="bg-main text-white rounded-full p-1 ">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor"
+        class="w-3.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+    <span class="hidden">c</span>
+</button>
+<div class="text-center">
+    <strong class="text-lg">{{product.price}}ر.س.</strong>
+    <p class="my-2 text-xs font-bold txt-xl-grey">{{product.name}} - {{product.sizeId}}</p>
+</div>
+
+
+</div>

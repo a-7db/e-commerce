@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: changa;
+    src: url(./assets/fonts/Changa-Regular.ttf);
+}
+
 :root {
     --main-color: #be1e2d;
     --gray-color: #F9F9FA;
@@ -11,10 +16,15 @@
 
 html {
     direction: rtl;
+    font-family: 'changa';
 }
 
 .bg-main{
     background-color: var(--main-color);
+}
+
+.br-main {
+    border-color: var(--main-color);
 }
 
 .txt-main{
@@ -44,4 +54,46 @@ html {
 .txt-xl-grey,
 input::placeholder{
     color: var(--xl-grey);
+}
+
+
+.hover:hover {
+    color: var(--main-color);
+}
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+}
+
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    /* Checkbox background color */
+    border: 1px solid #ccc;
+    /* Checkbox border color */
+    border-radius: 3px;
+}
+
+/* Checked state */
+.custom-checkbox:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

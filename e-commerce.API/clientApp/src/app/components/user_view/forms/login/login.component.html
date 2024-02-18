@@ -1,0 +1,23 @@
+<div class="bg-white flex flex-col gap-4 shadow-xl border border-gray-50 rounded-md p-5">
+  <p class="txt-main text-sm font-bold self-start">تسجيل الدخول</p>
+  
+  <form class="flex flex-col gap-3">
+    <input type="tel" placeholder="رقم الهاتف"
+    class="text-sm txt-xl-grey outline-none border rounded-md px-2 py-1 placeholder:text-end placeholder:text-xs">
+    <input type="text" placeholder="كلمة المرور"
+    class="text-sm txt-xl-grey outline-none border rounded-md px-2 py-1 placeholder:text-xs">
+
+    
+      <label class="flex gap-2 text-xs mb-2 cursor-pointer">
+      <input type="checkbox" class="custom-checkbox cursor-pointer">
+      احفظ معلوماتي
+    </label>
+   
+    <button type="submit" class="bg-main text-white text-sm py-1 rounded-md">تسجيل الدخول</button>
+
+    <div class="flex justify-between text-xs mt-4">
+      <a routerLink="create-account" class="txt-main font-bold cursor-pointer">سجل الأن</a>
+      <a class="underline underline-offset-2 txt-xl-grey cursor-pointer">نسيت كلمة المرور</a>
+    </div>
+  </form>
+</div>

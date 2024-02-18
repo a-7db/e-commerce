@@ -1,7 +1,7 @@
-<div class="bg-main h-11 flex justify-center">
+<div class="bg-main h-10 flex justify-center">
     <h2 class="text-white text-xl font-bold self-center">وفّر أكثر على منتجات سوبرماركت. التوصيل للمنزل قريبا.</h2>
 </div>
-<div class="grid grid-cols-6 py-4 px-10">
+<div class="grid grid-cols-6 py-2 px-10">
     <div class="col-span-2 cursor-pointer" routerLink="">
         <!-- Logo -->
         <img width="170" src="./assets/images/supermarket-logo.png" alt="supermarket-logo">
@@ -13,7 +13,7 @@
             <button type="button" class="bg-dark h-10 px-10 mx-auto text-sm">البحث</button>
         </div>
     </div>
-    <div class="flex justify-end self-center gap-3 col-span-2">
+    <div class="flex justify-end self-center gap-3 col-span-2 close">
         <div class="flex gap-2 ml-11 self-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="w-5 h-5">
@@ -21,7 +21,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
             </svg>
-            إستلم من <button class="font-bold">اختر الفرع</button>
+            إستلم من <button (click)="sidebarToggle()" class="font-bold">اختر الفرع</button>
         </div>
         <button type="button" class="bg-gray-200 w-9 h-9 rounded-full flex justify-center align-middle">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -31,14 +31,24 @@
                 </svg>
                 <span class="hidden">c</span>
         </button>
-        <button type="button" class="bg-gray-200 w-9 h-9 rounded-full flex justify-center align-middle">
+        <button (click)="loginToggle()" type="button" 
+        class="bg-gray-200 w-9 h-9 rounded-full flex justify-center align-middle relative">
+
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-5 h-5 txt-xl-grey self-center duration-150 hover:text-gray-900">
+
             <path stroke-linecap="round" stroke-linejoin="round"
             d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
             </svg>
+            
             <span class="hidden">c</span>
+
+            
         </button>
+        <div class="relative z-20">
+            <app-login [class.hidden]="!loginStste" *ngIf="animate" @zoomIn class="absolute left-0 top-10"></app-login>
+        </div>
     </div>
 </div>
 <app-navbar></app-navbar>
+<app-CitySelecting [animateState]="sidebarState" ></app-CitySelecting>

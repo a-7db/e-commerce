@@ -2,9 +2,47 @@
     <div class="basis-1/4">
         <app-product-fillter></app-product-fillter>
     </div>
-    <div class="basis-full">
-        <div class="flex justify-center">
-            Hello From {{slug}} Category
+<div class="basis-full ml-4">
+        <div class="flex justify-between h-16">
+            <p class="font-bold text-xs self-end">Home > المأكولات والمشروبات > الإفطار</p>
+
+            <h4 class="font-bold">{{slug}}</h4>
+
+            <div class="parent close">
+               <div (click)="dropdownToggle()" class="flex justify-between h-fit w-64 p-2 pb-3 bg-white cursor-pointer parent">
+                <div class="text-xs">
+                    الترتيب حسب <span class="font-bold text-sm txt-main">{{selectedType.name}}</span>
+                </div>
+                <svg class="self-center" width="16px" height="16px" viewBox="0 0 24 24">
+                    <path
+                        d="M17.333 9.693a1.08 1.08 0 0 0-1.462-.004L12 13.351 8.129 9.69a1.073 1.073 0 0 0-1.462.004l.066-.062a.936.936 0 0 0-.01 1.378l4.553 4.306c.4.378 1.047.38 1.448 0l4.552-4.306a.935.935 0 0 0-.009-1.378l.066.062z"
+                        fill="currentColor" fill-rule="evenodd"></path>
+                </svg>
+                </div>
+                <div [class.hidden]="!dropdownList" *ngIf="animate" @zoomIn
+                class="right-0 top-11 bg-white flex flex-col gap-4
+                py-4 overflow-hidden shadow-xl w-64 child">
+
+                    <div class="text-xs" *ngFor="let type of sortingTypes">
+                        
+                        <input (click)="onSorting(type)" (click)="dropdownToggle()" [(ngModel)]="selectedType" 
+                        [value]="type.type" class="hidden cursor-pointer" type="radio" name="filter"
+                        id="{{type.type}}">
+
+                        <label  [class.txt-main]="selectedType.type === type.type"
+                        class="flex items-center gap-2 cursor-pointer pr-5 hover font-bold" for="{{type.type}}">
+                        <span [class.hidden]="selectedType.type !== type.type" class="bg-main w-3 h-3 rounded-full"></span>
+                        {{type.name}}
+                    </label>
+                    </div>
+                </div> 
+            </div>
+            
+        </div>
+
+        <!-- PRODUCT LIST -->
+        <div class="grid grid-cols-4 gap-4 mt-3">
+            <app-product-card *ngFor="let product of range" [product]="product"></app-product-card>
         </div>
     </div>
 </div>
