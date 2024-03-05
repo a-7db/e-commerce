@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { SharedService } from 'src/app/services/Shared.service';
 
 @Component({
   selector: 'app-product-card',
@@ -8,9 +9,18 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductCardComponent implements OnInit {
   @Input() product!: Product;
-  constructor() { }
-
+  index: number = 0;
+  constructor(private sharedService: SharedService) { }
+  
   ngOnInit(): void {
+  }
+
+  discountCalculate(price: number, discount: number): number{
+    return price - (price * discount) / 100
+  }
+
+  cardOnClick() {
+    this.sharedService.clearCommand(true);
   }
 
 }

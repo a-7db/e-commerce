@@ -1,7 +1,7 @@
-<div routerLink="/product/{{product.slug}}"
-class="flex h-80 flex-col justify-evenly px-2 py-4 items-center bg-white border border-gray-200 cursor-pointer">
+<a (click)="cardOnClick()" [routerLink]="'/product/' + product.slug"
+class="flex relative h-80 flex-col justify-evenly px-2 py-4 items-center bg-white border border-gray-200 cursor-pointer">
 
-<img width="130" [src]="product.image" alt="{{product.slug}}-image">
+<img width="130" [src]="product.sizes[index].imagesUri[index]" alt="{{product.slug}}-image">
 <button class="bg-main text-white rounded-full p-1 ">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor"
         class="w-3.5">
@@ -10,9 +10,27 @@ class="flex h-80 flex-col justify-evenly px-2 py-4 items-center bg-white border 
     <span class="hidden">c</span>
 </button>
 <div class="text-center">
-    <strong class="text-lg">{{product.price}}ر.س.</strong>
-    <p class="my-2 text-xs font-bold txt-xl-grey">{{product.name}} - {{product.sizeId}}</p>
+    <div *ngIf="product.sizes[index].discount > 0; else showOriginalPrice" class="flex justify-center items-center gap-2">
+        <strong class="text-lg">
+            {{
+                discountCalculate(product.sizes[index].price, product.sizes[index].discount) | fixed
+            }}
+        </strong>
+
+        <p class="txt-xl-grey font-bold text-xs line-through decoration-1 decoration-gray-400">{{product.sizes[index].price}}ر.س.</p>
+    </div>
+    <p class="my-2 px-2 text-xs font-bold txt-xl-grey">{{product.name}} - {{product.sizes[0].size}}</p>
 </div>
 
+<div class="relative"></div>
+<div [class.hidden]="product.sizes[index].discount <= 0"
+class="absolute top-2 right-0 bg-main text-white min-w-24 discount">
+
+    <span class="text-xs font-bold px-2 py-1 flex gap-1.5"><span class="tracking-[.03rem]">{{product.sizes[index].discount}}%</span> خصم</span>
 
 </div>
+</a>
+
+<ng-template #showOriginalPrice>
+    <strong class="text-lg">{{product.sizes[index].price}}ر.س.</strong>
+</ng-template>

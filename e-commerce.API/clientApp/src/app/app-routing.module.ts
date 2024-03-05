@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/user_view/home/home.component';
+import { HomeComponent } from './components/user_view/home_view/home/home.component';
 import { ProductListComponent } from './components/user_view/product_view/product-list/product-list.component';
 import { NotFoundComponent } from './components/user_view/not-found/not-found.component';
 import { RegisterComponent } from './components/user_view/forms/register/register.component';

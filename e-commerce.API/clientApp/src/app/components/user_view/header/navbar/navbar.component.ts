@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
   ]
 
   currentIndex = 0;
-  itemWidth = 300; // Width of each carousel item
+  itemWidth = 300; 
   translateX: string = '';
 
   constructor() { }
@@ -41,6 +41,8 @@ export class NavbarComponent implements OnInit {
       this.translateX = this.currentIndex * this.itemWidth + 'px';
     }
   }
+
+  nextBtn: string = Math.floor(this.navs.length /2) + '00px'
 
   prev() {
     if (this.currentIndex > 0) {

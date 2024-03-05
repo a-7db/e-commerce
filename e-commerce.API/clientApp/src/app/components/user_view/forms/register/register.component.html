@@ -1,1 +1,37 @@
-<p>register works!</p>
+<div class="py-10 flex justify-center align-middle">
+    <div class="flex flex-col items-center w-[30%] bg-white px-8 py-4 rounded-lg shadow-lg">
+        <p class="txt-main font-bold text-sm">إنشاء حساب جديد</p>
+        <hr class="mt-2 w-2/3">
+        <form class="flex flex-col gap-4 mb-4 mt-8 w-4/5">
+
+            <div class="bg-grey  px-2 py-1 border-b rounded">
+                <input class="bg-transparent w-full placeholder:text-xs outline-none text-xs txt-xl-grey" type="text" placeholder="الأسم">
+            </div>
+            <div class="bg-grey px-2 py-1 border-b rounded">
+                <input class="bg-transparent w-full placeholder:text-xs outline-none text-xs txt-xl-grey"
+                type="email" placeholder="بريد إلكتروني username@example.com">
+            </div>
+            <div class="flex flex-col gap-1">
+                <div class="bg-grey px-2 py-1 border-b rounded">
+                    <input class="bg-transparent w-full placeholder:text-xs outline-none text-xs txt-xl-grey" type="password"
+                        placeholder="كلمة المرور">
+                </div>
+                <p class="text-[10px] text-gray-600">مكوّن من 8 أحرف على الأقل (A-Z) و (0-9)</p>
+            </div>
+            <div class="flex justify-between">
+                <div class="bg-grey px-3 py-1 border-b rounded">
+                    <input dir="ltr" class="bg-transparent w-full placeholder:text-xs  outline-none text-xs txt-xl-grey"
+                    type="text" placeholder="0XX XXX XXXX">
+                </div>
+                <button type="button" class="bg-main px-5 py-1 rounded-md text-white text-xs">تحقق</button>
+            </div>
+            
+            <label class="flex gap-2 text-xs mb-2 cursor-pointer text-gray-600">
+                <input type="checkbox" class="custom-checkbox cursor-pointer">
+                احفظ معلوماتي
+            </label>
+
+            <button type="submit" class="bg-main mt-4 px-5 py-2 rounded-md text-white text-xs font-bold">تسجييل</button>
+        </form>
+    </div>
+</div>

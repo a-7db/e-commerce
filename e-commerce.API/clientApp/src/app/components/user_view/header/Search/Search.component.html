@@ -1,0 +1,27 @@
+<div class="relative">
+  <!-- Search Input -->
+  <div class="grid grid-cols-5 relative">
+    <input [(ngModel)]="userInput" (keyup)="toggleSuggest()" class="col-span-4 bg-grey border border-gray-200 txt-xl-grey outline-none
+       w-full h-10 py-2 px-5 placeholder:text-sm caret-transparent" type="text" placeholder="مالذي تبحث عنه؟">
+    
+    <button type="button" class="bg-dark h-10 text-sm">البحث</button>
+  </div>
+
+  <!-- Searching Reuslts -->
+  <div [class.hidden]="!suggestionsState" *ngIf="(results|search:userInput).length > 0; else not_found">
+    <div class="absolute flex flex-col shadow-lg rounded-md border mt-2 p-4 bg-white w-full z-40">
+      <p class="text-xs txt-xl-grey font-bold">المنتجات المقترحة</p>
+
+      <app-ProductSlides [products]="results|search:userInput" [items_count]="2" [grid_col]="'grid-flow-col auto-cols-[minmax(50%,_1fr)]'"></app-ProductSlides>
+      
+    <a class="text-xs font-bold txt-main cursor-pointer self-center">اظهر جميع النتائج "<span>{{userInput}}</span>"</a>
+    </div>
+    
+  </div>
+</div>
+
+<ng-template #not_found>
+  <div class="absolute shadow-lg rounded-md border mt-2 p-4 bg-white w-full z-40">
+    <p class="font-bold text-sm">لم يتم العثور على المنتج</p>
+  </div>
+</ng-template>

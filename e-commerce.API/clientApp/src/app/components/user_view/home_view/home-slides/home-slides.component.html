@@ -1,0 +1,45 @@
+<!-- Slides -->
+<div class="relative">
+  <div dir="ltr" class="">
+    <owl-carousel-o id="car" [options]="customOptions" #owlCar>
+
+      <ng-container *ngFor="let slide of slides; let i = index">
+          <ng-template carouselSlide [id]="'slide-' + i">
+            <img [src]="slide" alt="dc">
+          </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </div>
+  <!-- PREVIOUS -->
+  <a (click)="owlCar.prev()"
+    class="z-10 absolute top-1/2 -translate-y-1/2 right-0 cursor-pointer rounded-full opacity-15 hover:opacity-35 duration-500">
+    <svg fill="#000000" width="64px" height="64px" viewBox="-25.6 -25.6 307.20 307.20" id="Flat"
+      xmlns="http://www.w3.org/2000/svg" transform="rotate(0)" stroke="#000000" stroke-width="0.00256">
+      <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="2.56">
+      </g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M96,212a4,4,0,0,1-2.82861-6.82837L170.34326,128,93.17139,50.82837a4.00009,4.00009,0,0,1,5.65722-5.65674l80,80a4,4,0,0,1,0,5.65674l-80,80A3.98805,3.98805,0,0,1,96,212Z">
+        </path>
+      </g>
+    </svg>
+  </a>
+  <!-- NEXT -->
+  <a (click)="owlCar.next()"
+    class="z-10 absolute top-1/2 -translate-y-1/2 left-0 cursor-pointer rounded-full opacity-15 hover:opacity-35 duration-500">
+    <svg fill="#000000" width="64px" height="64px" viewBox="-25.6 -25.6 307.20 307.20" id="Flat"
+      xmlns="http://www.w3.org/2000/svg" transform="rotate(0)matrix(-1, 0, 0, 1, 0, 0)" stroke="#000000"
+      stroke-width="0.00256">
+      <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="2.56">
+      </g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M96,212a4,4,0,0,1-2.82861-6.82837L170.34326,128,93.17139,50.82837a4.00009,4.00009,0,0,1,5.65722-5.65674l80,80a4,4,0,0,1,0,5.65674l-80,80A3.98805,3.98805,0,0,1,96,212Z">
+        </path>
+      </g>
+    </svg>
+  </a>
+</div>

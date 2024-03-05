@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { zoomIn } from 'src/app/animations';
 import { Product } from 'src/app/models/product';
+import { products } from 'src/app/models/repo';
 
 @Component({
   selector: 'app-product-list',
@@ -21,27 +22,14 @@ export class ProductListComponent implements OnInit {
   ]
   
   selectedType: ISorting = this.sortingTypes[0];
+ 
   
-  defualt: Product = {
-    name: 'طعام قطط سالمون مع المرق',
-    brandId: 'فريسكيز',
-    categoryId: 'قطط',
-    createdAt: new Date(),
-    discount: 10,
-    id: '5c12vcs',
-    image: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20220615/386613_1-20220615-220220.png',
-    price: 3.95,
-    sizeId: '85',
-    slug: 'salmon-in-gravy'
-  }
-  
-  range: Product[] = [];
+  range: Product[] = products;
   
   constructor(private route: ActivatedRoute) { }
   
   ngOnInit(): void {
     this.route.paramMap.subscribe(param => this.slug = param.get('name'))
-    this.range.push(this.defualt, this.defualt, this.defualt, this.defualt, this.defualt, this.defualt, this.defualt, this.defualt, this.defualt, this.defualt, this.defualt, this.defualt)
   }
   
   onSorting(type: ISorting){

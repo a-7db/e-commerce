@@ -1,19 +1,17 @@
 <div class="bg-main h-10 flex justify-center">
     <h2 class="text-white text-xl font-bold self-center">وفّر أكثر على منتجات سوبرماركت. التوصيل للمنزل قريبا.</h2>
 </div>
-<div class="grid grid-cols-6 py-2 px-10">
-    <div class="col-span-2 cursor-pointer" routerLink="">
+<div class="grid grid-cols-12 py-2 px-10">
+    <div class="col-span-3">
         <!-- Logo -->
-        <img width="170" src="./assets/images/supermarket-logo.png" alt="supermarket-logo">
+        <img routerLink="" class="cursor-pointer" width="170" src="./assets/images/supermarket-logo.png" alt="supermarket-logo">
     </div> 
-    <div class="col-span-2 self-center">
-        <div class="grid grid-cols-5">
-            <input class="col-span-4 bg-grey border border-gray-200 txt-xl-grey outline-none
-                    w-full h-10 py-2 px-5 placeholder:text-sm" type="text" placeholder="مالذي تبحث عنه؟">
-            <button type="button" class="bg-dark h-10 px-10 mx-auto text-sm">البحث</button>
-        </div>
+    <div class="col-span-5 self-center">
+        <!-- Search Component -->
+        <app-Search></app-Search>
+
     </div>
-    <div class="flex justify-end self-center gap-3 col-span-2 close">
+    <div class="col-span-4 flex justify-end self-center gap-3 close">
         <div class="flex gap-2 ml-11 self-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="w-5 h-5">
