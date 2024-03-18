@@ -1,0 +1,18 @@
+<div class="flex gap-4">
+    <div class="flex flex-col gap-1">
+        <input (keydown)="isValid()" [(ngModel)]="productSize" type="text" class="border w-fit" placeholder="الحجم">
+        <input (keydown)="isValid()" [(ngModel)]="price" type="number" class="border w-fit" placeholder="السعر">
+        <input (keydown)="isValid()" [(ngModel)]="discount" type="number" class="border w-fit" placeholder="الخصم">
+        <input (keydown)="isValid()" [(ngModel)]="image" type="text" class="border w-fit" placeholder="الصورة">
+        <div class="flex gap-2 my-4">
+            <button (click)="addImage()" [disabled]="!addImgBtn" type="button" class="bg-gray-800 text-white rounded-lg px-2 py-1 disabled:bg-gray-400">صورة اُخرى</button>
+            <button (click)="addSize()" [disabled]="!addSizeBtn" type="button" class="bg-green-800 text-white rounded-lg px-2 py-1 disabled:bg-gray-400">
+                أضف الحجم
+            </button>
+        </div>
+    </div>
+
+    <div class="">
+        <p *ngFor="let size of output" > {{size}} </p>
+    </div>
+</div>

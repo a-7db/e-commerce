@@ -1,6 +1,10 @@
 
 using e_commerce.API.Data;
+using e_commerce.API.Services.ICategory;
+using e_commerce.API.Services.IProduct;
+using e_commerce.API.Services.ISize;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 namespace e_commerce.API
 {
@@ -12,12 +16,20 @@ namespace e_commerce.API
 
             // Add services to the container.
 
-            builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("main")));
+            builder.Services.AddDbContext<DataContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("main")));
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers(options => options.SuppressAsyncSuffixInActionNames = false)
+                .AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddTransient<IProductService, ProductService>();
+            builder.Services.AddTransient<ISizesService, SizesService>();
+            builder.Services.AddTransient<ICategoryService, CategoryService>();
 
             builder.Services.AddCors(options =>
             {
@@ -37,7 +49,6 @@ namespace e_commerce.API
 
             app.UseHttpsRedirection();
             app.UseCors();
-
 
             app.UseAuthorization();
 

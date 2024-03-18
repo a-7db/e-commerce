@@ -1,5 +1,5 @@
 import { Category } from "./Category";
-import { IBrand } from "./IBrand";
+import { Brand } from "./brand";
 import { Product } from "./product";
 
 export const products: Product[] = [
@@ -12,15 +12,15 @@ export const products: Product[] = [
         sizes: [
             {
                 id: '29041',
-                size: '330 مل',
-                imagesUri: ['https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220811/224965_1-20220811-121413.png'],
+                productSize: '330 مل',
+                imagesUri: [{imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220811/224965_1-20220811-121413.png'}],
                 price: 16.95,
                 discount: 0
             },
             {
                 id: '29041',
-                size: '40x330 مل',
-                imagesUri: ['https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220811/224965_1-20220811-121413.png'],
+                productSize: '40x330 مل',
+                imagesUri: [{ imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220811/224965_1-20220811-121413.png'}],
                 price: 0.50,
                 discount: 29,
             },
@@ -37,25 +37,25 @@ export const products: Product[] = [
         sizes: [
             {
                 id: '29041',
-                size: '500 مل',
-                imagesUri: ['https://storage.googleapis.com/tm-zopsmart-uploads/320/20220323/274802_1-20220323-140917.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201031/274802_2-20201031-220826.png'],
+                productSize: '500 مل',
+                imagesUri: [{imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20220323/274802_1-20220323-140917.png'},
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201031/274802_2-20201031-220826.png'}],
                 price: 11.50,
                 discount: 40,
             },
             {
                 id: '29041',
-                size: '1 لتر',
-                imagesUri: ['https://storage.googleapis.com/tm-zopsmart-uploads/originals/20230316/274803_2-20230316-122528.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201031/274802_2-20201031-220826.png'],
+                productSize: '1 لتر',
+                imagesUri: [{imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20230316/274803_2-20230316-122528.png'},
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201031/274802_2-20201031-220826.png'}],
                 price: 28.95,
                 discount: 0,
             },
             {
                 id: '29041',
-                size: '250 مل',
-                imagesUri: ['https://storage.googleapis.com/tm-zopsmart-uploads/320/20220323/274800_1-20220323-140607.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201031/274802_2-20201031-220826.png'],
+                productSize: '250 مل',
+                imagesUri: [{imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20220323/274800_1-20220323-140607.png'},
+                    { imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201031/274802_2-20201031-220826.png'}],
                 price: 9.50,
                 discount: 0,
             },
@@ -72,8 +72,8 @@ export const products: Product[] = [
             {
                 id: '6526',
                 price: 3.95,
-                size: '85 غرام',
-                imagesUri: ['https://storage.googleapis.com/tm-zopsmart-uploads/320/20220615/386613_1-20220615-220220.png'],
+                productSize: '85 غرام',
+                imagesUri: [{ imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20220615/386613_1-20220615-220220.png'}],
                 discount: 0,
             }
         ],
@@ -88,9 +88,9 @@ export const products: Product[] = [
         sizes: [
             {
                 id: '51526',
-                imagesUri: ['https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220705/366218_1-20220705-115928.png'],
+                imagesUri: [{ imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220705/366218_1-20220705-115928.png'}],
                 price: 19.50,
-                size: '1 لتر',
+                productSize: '1 لتر',
                 discount: 0,
             },
         ],
@@ -107,14 +107,14 @@ export const products: Product[] = [
                 id: '51526',
                 imagesUri: 
                 [
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_1-20240131-074719.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_4-20240131-074729.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_6-20240131-074736.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_9-20240131-074748.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_11-20240131-074756.png'
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_1-20240131-074719.png'},
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_4-20240131-074729.png'},
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_6-20240131-074736.png'},
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_9-20240131-074748.png'},
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20240131/112608_11-20240131-074756.png'}
                 ],
                 price: 29.50,
-                size: '1 لتر',
+                productSize: '1 لتر',
                 discount: 0,
             },
         ],
@@ -131,11 +131,11 @@ export const products: Product[] = [
                 id: '51526',
                 imagesUri: 
                 [
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201101/238501_1-20201101-012102.png',
-                    'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201101/238501_2-20201101-012105.png'
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201101/238501_1-20201101-012102.png'},
+                    {imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20201101/238501_2-20201101-012105.png'}
                 ],
                 price: 26.95,
-                size: '100 قرص',
+                productSize: '100 قرص',
                 discount: 0,
             },
         ],
@@ -152,10 +152,10 @@ export const products: Product[] = [
                 id: '51526',
                 imagesUri:
                     [
-                        'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231019/112626_1-20231019-121101.png',
+                        { imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231019/112626_1-20231019-121101.png'},
                     ],
                 price: 26.95,
-                size: '910 غرام',
+                productSize: '910 غرام',
                 discount: 21,
             }
         ],
@@ -172,10 +172,10 @@ export const products: Product[] = [
                 id: '51526',
                 imagesUri:
                     [
-                        'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220309/317552_1-20220309-121821.png',
+                        { imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20220309/317552_1-20220309-121821.png'},
                     ],
                 price: 15.95,
-                size: '200 غرام',
+                productSize: '200 غرام',
                 discount: 0,
             }
         ],
@@ -192,10 +192,10 @@ export const products: Product[] = [
                 id: '51526',
                 imagesUri:
                     [
-                        'https://storage.googleapis.com/tm-zopsmart-uploads/320/20230228/393469_1-20230228-000016.png',
+                        { imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20230228/393469_1-20230228-000016.png'},
                     ],
                 price: 29.95,
-                size: '1.5 لتر',
+                productSize: '1.5 لتر',
                 discount: 37,
             }
         ],
@@ -221,153 +221,175 @@ export const slides: string[] = [
 
 export const categories: Category[] = [
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'الفاكهة والخضار',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231130/1-01-20231130-062002.png',
         slug: 'fruits--vegetables',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'المخبوزات',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20210122/TM1.2BAKERY-20210122-185350.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'اللحوم',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20190612/TM1.3MEAT-20190612-034224.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'الدواجن',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20240107/4-12-20240107-123154.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'مأكولات بحرية',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20210122/TM1.5SEAFOOD-20210122-185409.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'اللحوم الباردة والأجبان',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231204/3-12-06-20231204-065816.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'الالبان',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231203/1-07-20231203-054903.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'الزهور',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231130/1-08-20231130-084105.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
-        title: 'المأكولات والمشروبات',
-        parentCategoryId: null,
+        id: 'asf',
+        title: 'المكولات والمشأروبات',
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231203/1-09-20231203-084014.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'الإفطار',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231203/1-10-20231203-080147.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'وجبات خفيفة',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231204/1-11-20231204-070733.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'زيت وسمن',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231130/1-12-20231130-075712.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'أرز ومكرونة',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231130/1-13-20231130-081737.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'خبز',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231130/1-14-20231130-091601.png',
         slug: '',
+        isDisplayed: false
     },
     {
-        Id: 'asf',
+        id: 'asf',
         title: 'المياه والمشروبات',
-        parentCategoryId: null,
+        parentCategory: null,
         imageUri: 'https://storage.googleapis.com/tm-zopsmart-uploads/320/20231203/1-15-20231203-054937.png',
         slug: '',
+        isDisplayed: false
     },
 ]
 
-export const brands: IBrand[] = [
+export const brands: Brand[] = [
     {
-        Id: 'awv',
+        id: 'awv',
         name: 'Sanita',
         image: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20200610/sanita-20200610-080621.png',
-        slug: 'santia'
+        slug: 'santia',
+        isDisplayed: false
     },
     {
-        Id: 'awv',
+        id: 'awv',
         name: 'fam',
         image: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20200610/fam-final-20200610-075907.png',
-        slug: 'fam'
+        slug: 'fam',
+        isDisplayed: false
     },
     {
-        Id: 'awv',
+        id: 'awv',
         name: 'freshdays',
         image: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20200610/freshdays-final-20200610-080213.png',
-        slug: 'freshdays'
+        slug: 'freshdays',
+        isDisplayed: false
     },
     {
-        Id: 'awv',
+        id: 'awv',
         name: 'private',
         image: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20200610/private-final-20200610-080506.png',
-        slug: 'private'
+        slug: 'private',
+        isDisplayed: false
     },
     {
-        Id: 'awv',
+        id: 'awv',
         name: 'هلا',
         image: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20200610/hala-final-20200610-080414.png',
-        slug: 'hala'
+        slug: 'hala',
+        isDisplayed: false
     },
     {
-        Id: 'awv',
+        id: 'awv',
         name: 'بامبي',
         image: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20200610/sanita-bambi-final-20200610-080704.png',
-        slug: 'sanita-bambi'
+        slug: 'sanita-bambi',
+        isDisplayed: false
     },
     {
-        Id: 'awv',
+        id: 'awv',
         name: 'SAFEWAY',
         image: 'https://storage.googleapis.com/tm-zopsmart-uploads/originals/20201015/safeway-logo-20201015-134515.png',
-        slug: 'safeway'
+        slug: 'safeway',
+        isDisplayed: false
     },
 ]

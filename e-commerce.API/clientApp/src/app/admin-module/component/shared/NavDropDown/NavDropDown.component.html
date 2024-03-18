@@ -1,0 +1,27 @@
+
+  <div (click)="dorpDown()"
+    class="flex justify-between items-center hover:bg-gray-900 duration-150 rounded-md w-full p-2 cursor-pointer mb-1">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="data.icon"/>
+      </svg>
+      
+      <p>{{data.parentTitle}}</p>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="w-3 h-3">
+      <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="icon" />
+    </svg>
+  </div>
+
+  <!-- Children -->
+  <div *ngIf="isDisplayed" @height class="flex flex-col gap-1 mb-1">
+    <app-DashNav *ngFor="let nav of data.navs" 
+    [title]="nav.text"
+    [icon]="nav.icon"
+    [link]="nav.url"
+    class="mr-2"></app-DashNav>
+    <hr class="w-5/6 border-gray-700 mx-auto mt-1">
+  </div>

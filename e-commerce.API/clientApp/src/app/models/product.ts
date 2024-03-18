@@ -1,6 +1,6 @@
 import { Size } from "./size";
 
-export class Product {
+export interface Product {
     id: string;
     name: string;
     sizes: Size[];
@@ -8,17 +8,13 @@ export class Product {
     category: string;
     slug: string;
     createdAt: Date;
+}
 
-    constructor(id: string, name: string, sizes: Size[]
-        ,brandId: string, categoryId: string
-        ,slug: string, createdAt: Date) {
 
-        this.id = id;
-        this.name = name;
-        this.sizes = sizes;
-        this.category = categoryId;
-        this.brand = brandId;
-        this.slug = slug;
-        this.createdAt = createdAt;
-    }
+export interface NewProduct {
+    name: string,
+    sizes: Size[],
+    brandId: string,
+    categoryId: string,
+    slug: string
 }

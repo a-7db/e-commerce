@@ -1,4 +1,5 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, inject } from '@angular/core';
+import { LoadingSetupService } from 'src/app/services/LoadingSetup.service';
 
 @Component({
   selector: 'app-LoadingScreen',
@@ -10,12 +11,15 @@ export class LoadingScreenComponent implements OnInit {
   play: boolean = false;
   constructor(private renderer: Renderer2) { }
 
+  private _loading = inject(LoadingSetupService);
+  
   ngOnInit() {
     this.Loading()
   }
 
   Loading(){
     // Add Service to show The Loader
+    this._loading.isPlaying().subscribe(value => this.play = value);
   }
 
   private showLoader(): void {

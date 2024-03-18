@@ -1,19 +1,17 @@
-export class Category {
-    constructor(
-        Id: string,
-        title: string,
-        imageUri: string,
-        slug: string,
-        parentCategoryId: string | null
-    ) {
-        this.Id = Id
-        this.title = title
-        this.imageUri = imageUri
-        this.slug = slug
-        this.parentCategoryId = parentCategoryId
-    } Id: string
+export interface Category {
+    id: string
     title: string
     imageUri: string
     slug: string
+    parentCategory: Category | null
+    isDisplayed: boolean
+}
+
+
+export interface PostCategory {
+    title: string
+    imageUri: string | null
+    slug: string
     parentCategoryId: string | null
+    isDisplayed: boolean
 }

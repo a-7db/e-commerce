@@ -1,7 +1,7 @@
 <a (click)="cardOnClick()" [routerLink]="'/product/' + product.slug"
 class="flex relative h-80 flex-col justify-evenly px-2 py-4 items-center bg-white border border-gray-200 cursor-pointer">
 
-<img width="130" [src]="product.sizes[index].imagesUri[index]" alt="{{product.slug}}-image">
+<img width="130" [src]="product.sizes[index].imagesUri[index].imageUri" alt="{{product.slug}}-image">
 <button class="bg-main text-white rounded-full p-1 ">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor"
         class="w-3.5">
@@ -19,7 +19,7 @@ class="flex relative h-80 flex-col justify-evenly px-2 py-4 items-center bg-whit
 
         <p class="txt-xl-grey font-bold text-xs line-through decoration-1 decoration-gray-400">{{product.sizes[index].price}}ر.س.</p>
     </div>
-    <p class="my-2 px-2 text-xs font-bold txt-xl-grey">{{product.name}} - {{product.sizes[0].size}}</p>
+    <p class="my-2 px-2 text-xs font-bold txt-xl-grey">{{product.name}} - {{product.sizes[0].productSize}}</p>
 </div>
 
 <div class="relative"></div>

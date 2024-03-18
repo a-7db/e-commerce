@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/Category';
-import { IBrand } from 'src/app/models/IBrand';
+import { Brand } from 'src/app/models/brand';
 import { Product } from 'src/app/models/product';
 import { brands, categories, products, slides } from 'src/app/models/repo';
 
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   slides: string[] = slides;
   categories: Category[] = categories;
   bestSaller: Product[] = products;
-  brands: IBrand[] = brands;
+  brands: Brand[] = brands;
   constructor() { }
 
   ngOnInit(): void {

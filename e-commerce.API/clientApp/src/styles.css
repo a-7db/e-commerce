@@ -103,6 +103,22 @@ input::placeholder{
     align-items: center;
 }
 
+#isDisplayed.custom-checkbox:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: #30435e;
+    color: white;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #car .owl-theme .owl-dots .owl-dot span {
     background-color: var(--darker-gray);
     width: 1.6rem;

@@ -5,7 +5,7 @@
       <p class="font-bold text-sm">Home > المأكولات والمشروبات > الإفطار</p>
     </div>
     <div class="w-full bg-white border px-4 py-6 pb-8 flex flex-col">
-      <h2 class="font-bold mb-6">{{product.name}} - {{product.sizes[index].size}}</h2>
+      <h2 class="font-bold mb-6">{{product.name}} - {{product.sizes[index].productSize}}</h2>
       <div class="grid grid-cols-6">
         <!-- Slides -->
         <div dir="ltr" class="col-span-2">
@@ -32,7 +32,7 @@
               </div>
               <div class="flex justify-between justify-items-start pb-4 border-b">
                 <p class="basis-1/2">الحجم</p>
-                <p class="basis-1/2">{{product.sizes[index].size}}</p>
+                <p class="basis-1/2">{{product.sizes[index].productSize}}</p>
               </div>
               <div class="flex justify-between justify-items-start pb-4 border-b">
                 <p class="basis-1/2">السعر</p>
@@ -87,7 +87,7 @@
             </div>
             <div class="flex gap-2 text-xs">
               <strong>{{prod.price}}ر.س.</strong>
-              <strong class="txt-xl-grey">/ {{prod.size}}</strong>
+              <strong class="txt-xl-grey">/ {{prod.productSize}}</strong>
             </div>
           </div>
         </div>

@@ -30,3 +30,11 @@ export let display = trigger('display', [
     transition('hidden => visible', animate('300ms ease-out')),
     transition('visible => hidden', animate('300ms ease-in'))
 ]);
+
+export const height = trigger('height', [
+    state('void', style({
+        height: 0,
+        opacity: 0
+    })),
+    transition(':enter, :leave', [animate(150)])
+])

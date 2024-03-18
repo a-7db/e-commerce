@@ -23,9 +23,9 @@ export class ProductDetailsComponent implements OnInit {
       {
         discount: 0,
         id: '',
-        imagesUri: [''],
+        imagesUri: [{ imageUri: '' }],
         price: 0,
-        size: ''
+        productSize: ''
       }
     ],
     slug: ''

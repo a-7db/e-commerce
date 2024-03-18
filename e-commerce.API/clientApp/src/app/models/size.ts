@@ -1,21 +1,12 @@
-export class Size {
-    id: string
-    size: string
+export interface Size {
+    id?: string
+    productSize: string
     price: number
     discount: number
-    imagesUri: string[]
+    imagesUri: imgsList[]
+}
 
-    constructor(
-        id: string,
-        size: string,
-        price: number,
-        discount: number,
-        imagesUri: string[]
-    ) {
-        this.id = id
-        this.size = size
-        this.price = price
-        this.discount = discount
-        this.imagesUri = imagesUri
-    }
+
+export interface imgsList {
+    imageUri: string
 }

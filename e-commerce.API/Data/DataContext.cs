@@ -13,5 +13,20 @@ namespace e_commerce.API.Data
 
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Size> Sizes { get; set; }
+        public DbSet<ProductImages> ImagesUri { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // DB Relationships
+            modelBuilder.Relationships();
+
+            // AutoInclude Navigations
+            modelBuilder.AutoIncluding();
+
+        }
     }
 }
