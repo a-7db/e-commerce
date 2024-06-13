@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using e_commerce.API.Data;
-using e_commerce.API.Models;
-using e_commerce.API.Dtos;
-using e_commerce.API.Mapping;
+using e_commerce.EF.Data;
+using e_commerce.Entities.Models;
+using e_commerce.Entities.Dtos;
+using e_commerce.Entities.Mapping;
 using Microsoft.CodeAnalysis;
-using e_commerce.API.Services.IProduct;
-using e_commerce.API.Services.ISize;
+using e_commerce.EF.Services.IProduct;
+using e_commerce.EF.Services.ISize;
 
 namespace e_commerce.API.Controllers
 {

@@ -1,8 +1,8 @@
 
-using e_commerce.API.Data;
-using e_commerce.API.Services.ICategory;
-using e_commerce.API.Services.IProduct;
-using e_commerce.API.Services.ISize;
+using e_commerce.EF.Data;
+using e_commerce.EF.Services.ICategory;
+using e_commerce.EF.Services.IProduct;
+using e_commerce.EF.Services.ISize;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 

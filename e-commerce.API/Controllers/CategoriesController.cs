@@ -1,8 +1,8 @@
-﻿using e_commerce.API.Data;
-using e_commerce.API.Dtos;
-using e_commerce.API.Mapping;
-using e_commerce.API.Models;
-using e_commerce.API.Services.ICategory;
+﻿using e_commerce.EF.Data;
+using e_commerce.Entities.Dtos;
+using e_commerce.Entities.Mapping;
+using e_commerce.Entities.Models;
+using e_commerce.EF.Services.ICategory;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,11 +28,27 @@ namespace e_commerce.API.Controllers
             return Ok(categoryDtos);
         }
 
+        // Get By ID
+        [HttpGet("{id:guid}", Name = "GetById")]
+        public async Task<ActionResult<IEnumerable<CategoryDto>>> GetById(Guid id)
+        {
+            var categoryDtos = await _categoryService.GetAll();
+
+            return Ok(categoryDtos);
+        }
+
         [HttpGet("GetAllParent")]
         public async Task<ActionResult<IEnumerable<CategoryDto>>> GetAllParent()
         {
             var allParent = await _categoryService.GetAllParent();
             return Ok(allParent);
+        }
+
+        [HttpGet("GetAllWithChildren")]
+        public async Task<ActionResult<IEnumerable<CategoryWithChildrenDto>>> GetAllWithChildren()
+        {
+            var allWithChildren = await _categoryService.GetAllWithChildren();
+            return Ok(allWithChildren);
         }
 
         [HttpPost]
@@ -43,8 +59,7 @@ namespace e_commerce.API.Controllers
 
             var newCategory = await _categoryService.PostCategory(categoryDto!);
 
-
-            return Created($"~/api/v1/categories/{newCategory.ID}", newCategory);
+            return CreatedAtAction(nameof(GetById), new { ID = newCategory.ID }, newCategory);
         }
     }
 }

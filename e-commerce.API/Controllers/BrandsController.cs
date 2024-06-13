@@ -1,6 +1,6 @@
-﻿using e_commerce.API.Data;
-using e_commerce.API.Dtos;
-using e_commerce.API.Mapping;
+﻿using e_commerce.EF.Data;
+using e_commerce.Entities.Dtos;
+using e_commerce.Entities.Mapping;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
